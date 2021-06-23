@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stefan's Blog - 2021</title>
+<link rel="icon" href="favicon.png">
+<meta charset="utf-8">
+<meta property="og:title" content="Stefan's Blog" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.stefantodorovic.com" />
+<meta property="og:image" content="http://blog.stefantodorovic.com/favicon.png" />
+<meta property="og:description" content="Welcome to my blog, not sure what it will be about yet. But there will be stuff posted here every so often." />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>This is a BLOG</h1>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+
+      <div class="card">
+        <a id="post_BellPods"></a>
+        <h2>Hardwired Bell Pods</h2>
+        <h5>April 9, 2021</h5>
+        <p>I've recently noticed that the popularity of ISP provided mesh systems here in Canada, with two large ones being the <a href="https://www.bell.ca/Bell_Internet/Products/Wifi">Bell Wifi Pods</a>(2 for $10/month) and the  <a href="https://www.rogers.com/customer/support/article/how-to-setup-ignite-wifi-pod">Rogers Ignite wifi pods</a>(generally included for free).</p> 
+        <p>I've seen a lot of these installed in new development homes that are already pre-wired with Cat5e or Cat6, and thought, there sure is a better way then using these as a repeater type device.</p>
+        <p>Come to find out, there is. According to Plume's <a href="https://support.plume.com/hc/en-us/articles/115002331007-Does-hardwiring-pods-improve-Wi-Fi-performance-">Do hardwired pods improve Wi-Fi performance?</a> they support something more similar to an access point mode! Even thought most telecom representatives aren't aware of this, and will tell you that you can't.</p>
+        <p>So, I thought I would give it a try.</p>
+        <p>The premis is really simple: </p>
+        <ol>
+          <li>Unplug the Pod</li>
+          <li>Connect it to a network cable that is connected to your router/switch</li>
+          <li>Plug the pod back into power</li>
+        </ol>
+        <img src="images/post_BellPods/unplugedPOD.jpg" alt="Bell Pod that is not connected" style="height:200px;"><img src="images/post_BellPods/wiredPOD.jpg" alt="Bell Pod that has a RJ45 cable connected" style="height:200px;"><img src="images/post_BellPods/connectedPOD.jpg" alt="Bell Pod that has a hardwired connection." style="height:200px;">
+        <p>Did it help? Yes! Well to begin, the pods by themselves did a terrific job, bringing an area with about a 20/20 connection to about 120/100. After hard wiring the pod, the full 150/150 connection speed was achieved.</p>
+        <img src="images/post_BellPods/speedtest_beforePOD.jpg" alt="Speedtest before the pod was installed" style="height:300px;"><img src="images/post_BellPods/speedtest_wirelessPOD.jpg" alt="Speedtest when a wireless Pod was installed" style="height:300px;"><img src="images/post_BellPods/speedtest_wiredPOD.jpg" alt="Speedtest when a hardwired Pod was installed" style="height:300px;">
+        <p>The take away is: if you have bad coverage and just want a plug and play solution, the bell wifi pods aren't bad. And hard wiring them will just make them work better. These are especially good for people who don't want to go through the effort or expense of a more proper network install.</p>
+        <p>Side note for pods that have a second rj45 jack: you can use the second jack as a "passthrough" to plug in your computer, tv, games consle, etc...</p>
+        <a href="https://blog.stefantodorovic.com/2021.html#post_BellPods">Link to this post</a>
+      </div>
+
+
+
+    <div class="card">
+      <a id="post_June_16_2021"></a>
+      <h2>Scuffed Internet Setup</h2>
+      <h5>June 16, 2021</h5>
+      <p>A couple of months ago we were lucky enough to be able to subscribe to a 500/500 Mbps fiber connection, at this time we also decided to upgrade our network to Unifi. Finally nearly 6 months later, I may present the scuffed setup that is my home internet.</p>
+      <br>
+      <p>This setup includes features such as:</p>
+      <ul>
+        <li>Switch as media converter <a href="https://www.reddit.com/r/UNIFI/comments/bkfxw1/how_to_get_rid_of_the_bell_home_hub_3000_and/">see how here</a></li>
+        <li>Scuffed 3d printed patch pannel with incorrectly sized keystone jacks</li>
+        <li>Access Point Data/Power running outside using an indoor rated cable</li>
+        <li>Poorly Balanced UPS</li>
+        <li>S#!T Cable Management</li>
+        <li>Using 1 cable to run 2 100Mbps feeds</li>
+        <li>CCA and random CAT5 cable that was used for phone</li>
+      </ul> 
+      <img src="images/post_June_16_2021/router.jpg"style="height:300px;"><img src="images/post_June_16_2021/generalSwitch.jpg" style="height:300px;"><img src="images/post_June_16_2021/patchpanel.jpg" style="height:300px;">
+      <img src="images/post_June_16_2021/AP1.jpg" style="height:300px;"><img src="images/post_June_16_2021/fiber_switch.jpg"style="height:300px;"><img src="images/post_June_16_2021/AP2.jpg"style="height:300px;">
+      <br>
+      <a href="https://blog.stefantodorovic.com/2021.html#post_June_16_2021">Link to this post</a>
+    </div>
+
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <p>Welcome to my blog, not sure what it will be about yet. But there will be stuff posted here every so often.</p>
+    </div>
+    
+    <div class="card">
+      <h3>Important links</h3>
+      <div class="fakeimg"><a href="#">Important Link 1</a></div><br>
+      <div class="fakeimg"><a href="#">Important Link 2</a></div><br>
+      <div class="fakeimg"><a href="#">Important Link 3</a></div><br>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>All the information on this website - stefantodorovic.com - is published in good faith and for general information purpose only. Stefan Todorovic does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Stefan Todorovic), is strictly at your own risk. Stefan Todorovic will not be liable for any losses and/or damages in connection with the use of our website.
+</div>
+
+</body>
+</html>
